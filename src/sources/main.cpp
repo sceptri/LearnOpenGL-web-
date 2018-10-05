@@ -188,7 +188,7 @@ int main()
 
     //load and generate texture
     int width, height, nrChannels;
-    unsigned char* data = stbi_load("/home/sceptri/Dev/Dev/QtWorkspace/GameEngine/res/images/container.jpg", &width, &height, &nrChannels, 0); //loading image into memory and then passing pointer to it
+    unsigned char* data = stbi_load("/home/sceptri/Dev/Dev/QtWorkspace/LearnOpenGLweb/res/images/container.jpg", &width, &height, &nrChannels, 0); //loading image into memory and then passing pointer to it
     if(data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data); //loading texture data into bound texture
@@ -205,7 +205,7 @@ int main()
     glGenTextures(1, &texture2);
     glBindTexture(GL_TEXTURE_2D, texture2);
 
-    data = stbi_load("/home/sceptri/Dev/Dev/QtWorkspace/GameEngine/res/images/awesomeface.png", &width, &height, &nrChannels, 0);
+    data = stbi_load("/home/sceptri/Dev/Dev/QtWorkspace/LearnOpenGLweb/res/images/awesomeface.png", &width, &height, &nrChannels, 0);
     if (data)
     {
         glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
@@ -220,7 +220,7 @@ int main()
     stbi_image_free(data);
 
     //loading shaders, parsing them, linking them etc.
-    Shader ourShader("/home/sceptri/Dev/Dev/QtWorkspace/GameEngine/res/shaders/shader.vs", "/home/sceptri/Dev/Dev/QtWorkspace/GameEngine/res/shaders/shader.fs"); //absolute path
+    Shader ourShader("/home/sceptri/Dev/Dev/QtWorkspace/LearnOpenGLweb/res/shaders/shader.vs", "/home/sceptri/Dev/Dev/QtWorkspace/LearnOpenGLweb/res/shaders/shader.fs"); //absolute path
 
     //"Binding" color coordinates to second attrib array
     //glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)(3*sizeof (float))); //second from the end is stride in bytes and last one is offset also in bytes
